@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
+
+.header{
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("/src/images/book.png") no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size:  cover;
+  -o-background-size: cover;
+  background-size: 100%;
+}
+
+.header-text{
+    text-align: center;
+    margin-top: 0;
+    padding-top: 20px;
+    font-family: 'Inconsolata', monospace;
+    color: #FFFFFF;
+    font-size: 50px;
+}
+
+.div-search{
+    display: grid;
+    grid-template-columns: 93.9% 5.5%;
+    margin-top: 20px;
+    width: 54%;
+    margin: 0 auto;
+}
+
+.sorting-categories-menu{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 25px;
+    margin-top: 35px;
+    padding-bottom: 30px;
+}
+
+.div-categories, .div-sorting{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-column-gap: 10px;
+}
+
+.div-categories{
+    justify-self: end;
+}
+
+.div-sorting {
+    justify-self: start;
+}
+
+.button-search, .input-search{
+    border: none;
+    outline: none;
+}
+
+.input-search{
+    padding: 10px;
+    padding-left: 20px;
+    font-size: 20px;
+    font-family: 'Inconsolata', monospace;
+    color: #696969;
+}
+
+.input-search::-webkit-input-placeholder { color: #696969; }
+
+.button-search{
+    background: url("/src/images/search.png") no-repeat;
+    background-size: 43px;
+    width: 43px;
+    padding: 0;
+    justify-self: start;
+}
+
+.text-categories, .text-sorting-by{
+    align-self: center;
+    font-size: 22px;
+    font-family: 'Inconsolata', monospace;
+} 
+
+.text-categories{
+    justify-self: end;
+    color: #FFFFFF;
+}
+
+.text-sorting-by{
+    justify-self: start;
+    color: #FFFFFF;
+}
+
+.select-categories, .select-sorting-by{
+    font-size: 20px;
+    padding: 5px;
+    font-family: 'Inconsolata', monospace;
+    color: #696969;
+    outline: none;
+}

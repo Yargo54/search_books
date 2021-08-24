@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+.book-card{
+    display: grid;
+    background-color: #DCDCDC;
+    text-align: start;
+    /* width: 360px; */
+}
+
+.img-book{
+    width: 360px;
+}
+
+.book-categorie, .description, .author{
+    justify-self: start;
+    padding-left: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.book-categorie{
+    margin-top: 10px;
+    text-decoration: underline;
+    color: #808080;
+}
+
+.description{
+    font-weight: 700;
+    width: 268px;
+    font-size: 20px;
+}
+
+.author{
+    margin-bottom: 15px;
+    color: #808080;
+}

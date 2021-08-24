@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+.img-book-info{
+    background-color: #DCDCDC;
+    text-align: center;
+}
+
+.book-info{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 40px 20px;
+}
+
+.info-img-book{
+    width: 80%;
+    justify-self: center;
+}
+
+.description-book-info{
+    display: grid;
+    grid-template-rows: 100px 80px 45px;
+    justify-items: start;
+    text-align: start;
+    padding: 30px;
+    background-color: #FFFFFF;
+}
+
+.category-book-info{
+    align-self: end;
+    color: #696969;
+}
+
+.author-book-info{
+    margin: 0;
+    margin-bottom: 15px;
+    align-self: end;
+}
+
+.publishing-house{
+    text-decoration: underline;
+    color: #A9A9A9;
+}
+
+.description-text{
+    border: 1px solid black;
+    padding: 15px;
+    width: 71%;
+    font-weight: 700;
+}
