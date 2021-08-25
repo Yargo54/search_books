@@ -1,20 +1,40 @@
 import React from "react";
 import "./BookInfo.css";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import { changeBookCardList} from "../state/actions";
 
-function BookInfo() {
+function BookInfo({ img, categoryBookInfo, authorBookInfo, publishingHouse, descriptionBookInfo, changeBookCardList}) {
     return (
         <div className="book-info">
             <div className="img-book-info">
-                <img src="https://cdn.pixabay.com/photo/2018/01/17/18/43/book-3088775_960_720.jpg" alt="img book" className="info-img-book"/>
+                <img src={img} alt="img book" className="info-img-book"/>
             </div>
             <div className="description-book-info">
-                <span className="category-book-info">Art/General</span>
-                <h1 className="author-book-info">J.S. Bach The Golden Variations in Open Sorce</h1>
-                <span className="publishing-house">Kendal Durele Briggs</span>
-                <p className="description-text">An open score edition of Bach's Goldberg Variations</p>
+                <span className="category-book-info">{categoryBookInfo}</span>
+                <h1 className="author-book-info">{authorBookInfo}</h1>
+                <span className="publishing-house">{publishingHouse}</span>
+                <p className="description-text">{descriptionBookInfo}</p>
+                <button className="button-go-back" onClick={() => changeBookCardList()}>Назад</button>
             </div>
         </div>
     );
 };
 
-export default BookInfo;
+const putStateToProps = (state) => {
+    return {
+        img: state.img,
+        categoryBookInfo: state.categoryBookInfo,
+        authorBookInfo: state.authorBookInfo,
+        publishingHouse: state.publishingHouse,
+        descriptionBookInfo: state.descriptionBookInfo
+    }
+}
+
+const putActionsToProps = (dispath) => {
+    return {
+        changeBookCardList: bindActionCreators(changeBookCardList, dispath)
+    }
+}
+
+export default connect (putStateToProps, putActionsToProps)(BookInfo);

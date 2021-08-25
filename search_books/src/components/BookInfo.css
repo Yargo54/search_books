@@ -15,6 +15,10 @@
     margin: 40px 20px;
 }
 
+.button-go-back{
+    align-self: start;
+}
+
 .info-img-book{
     width: 80%;
     justify-self: center;
@@ -48,6 +52,6 @@
 .description-text{
     border: 1px solid black;
     padding: 15px;
-    width: 71%;
+    width: 91%;
     font-weight: 700;
 }

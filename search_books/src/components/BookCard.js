@@ -1,15 +1,27 @@
 import React from "react";
 import "./BookCard.css";
+import { connect } from "react-redux"
 
-function BookCard() {
+function BookCard( {img, categories, description, author} ) {
     return (
         <div className="book-card">
-            <img src="https://cdn.pixabay.com/photo/2018/01/17/18/43/book-3088775_960_720.jpg" alt="img book" className="img-book"/>
-            <span className="book-categorie">Computers</span>
-            <p className="description">Node.js Разработка серверных веб-приложений на JavaScript</p>
-            <span className="author">Дэвид Хэррон</span>
+            <img src={img} alt="img book" className="img-book"/>
+            <span className="book-categorie">{categories}</span>
+            <p className="description">{description}</p>
+            <span className="author">{author}</span>
         </div>
     );
 };
 
-export default BookCard;
+const putStateToProps = (state) => {
+    return {
+        img: state.img,
+        categories: state.categories,
+        description: state.description,
+        author: state.author
+    };
+};
+
+export default connect (putStateToProps)(BookCard)
+
+// export default BookCard;
