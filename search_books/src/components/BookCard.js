@@ -1,27 +1,41 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { idBook } from "../state/actions";
 import "./BookCard.css";
-import { connect } from "react-redux"
 
-function BookCard( {img, categories, description, author} ) {
+function BookCard({ book }) {
+
+    const dispatch = useDispatch();
+
     return (
-        <div className="book-card">
-            <img src={img} alt="img book" className="img-book"/>
-            <span className="book-categorie">{categories}</span>
-            <p className="description">{description}</p>
-            <span className="author">{author}</span>
-        </div>
+        <>
+            <div className="book-card" id={book.id} onClick={() => dispatch(idBook(book.id))}>
+                <img src={
+                    book.volumeInfo.imageLinks.smallThumbnail 
+                        ? 
+                            book.volumeInfo.imageLinks.smallThumbnail 
+                        : 
+                            "https://www.hot-motor.ru/body/clothes/images/no_icon.png"
+                    } 
+                    alt="img book" 
+                    className="img-book"/>
+                <span className="book-categorie">{
+                    book.volumeInfo.categories ? book.volumeInfo.categories[0].split(',')[0] : "" 
+                }</span>
+                <p className="description">{book.volumeInfo.title ? book.volumeInfo.title : ""}</p>
+                <div className="div-author">
+                    {book.volumeInfo.authors ? book.volumeInfo.authors.map((item, i) => {
+                        if (i === book.volumeInfo.authors.length - 1) {
+                            return <span className="author">{item}</span>
+                        } else {
+                            return <span className="author">{item}, </span>
+                        }
+                    }) : ""}
+                </div>
+            </div>
+        </>
     );
 };
 
-const putStateToProps = (state) => {
-    return {
-        img: state.img,
-        categories: state.categories,
-        description: state.description,
-        author: state.author
-    };
-};
 
-export default connect (putStateToProps)(BookCard)
-
-// export default BookCard;
+export default BookCard;

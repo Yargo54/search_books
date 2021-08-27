@@ -4,11 +4,18 @@
     display: grid;
     background-color: #DCDCDC;
     text-align: start;
-    /* width: 360px; */
+    grid-row-gap: 10px;
+    grid-template-columns: 100%;
+    width: 90%;
+    align-items: center;
 }
 
 .img-book{
-    width: 360px;
+    justify-self: center;
+    align-self: center;
+    width: 67%;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .book-categorie, .description, .author{
@@ -18,18 +25,33 @@
 }
 
 .book-categorie{
-    margin-top: 10px;
     text-decoration: underline;
     color: #808080;
 }
 
 .description{
     font-weight: 700;
-    width: 268px;
+    width: 50%;
     font-size: 20px;
+    margin: 0;
+}
+
+.div-author{
+    padding-left: 15px;
+    margin-bottom: 15px;
+    margin-right: 10px;
 }
 
 .author{
-    margin-bottom: 15px;
+    padding: 0;
     color: #808080;
+}
+
+@media screen and (max-width: 991px) {
+    .description{
+        font-weight: 700;
+        width: 50%;
+        font-size: 15px;
+        margin: 0;
+    }
 }

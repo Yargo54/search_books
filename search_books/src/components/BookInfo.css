@@ -5,14 +5,17 @@
 }
 
 .img-book-info{
+    display: grid;
     background-color: #DCDCDC;
-    text-align: center;
 }
 
 .book-info{
+    width: 1083px;
     display: grid;
-    grid-template-columns: 50% 50%;
-    margin: 40px 20px;
+    grid-template-columns: 500px 581px;
+    margin: 0 auto;
+    padding-top: 25px;
+    padding-bottom: 20px;
 }
 
 .button-go-back{
@@ -20,8 +23,9 @@
 }
 
 .info-img-book{
-    width: 80%;
+    width: 65%;
     justify-self: center;
+    align-self: center;
 }
 
 .description-book-info{
@@ -31,27 +35,28 @@
     text-align: start;
     padding: 30px;
     background-color: #FFFFFF;
+    width: 125%;
 }
 
 .category-book-info{
     align-self: end;
     color: #696969;
+    align-self: center;
 }
 
-.author-book-info{
+.title-book-info{
     margin: 0;
-    margin-bottom: 15px;
     align-self: end;
 }
 
-.publishing-house{
+.author-book-info{
     text-decoration: underline;
     color: #A9A9A9;
+    align-self: center;
 }
 
 .description-text{
     border: 1px solid black;
     padding: 15px;
-    width: 91%;
     font-weight: 700;
 }

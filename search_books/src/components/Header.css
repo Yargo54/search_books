@@ -2,10 +2,12 @@
 
 .header{
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("/src/images/book.png") no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size:  cover;
-  -o-background-size: cover;
-  background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size:  cover;
+    -o-background-size: cover;
+    background-size: 100%;
+    width:calc(100% - 200px);
+    margin: 0 auto;
 }
 
 .header-text{
@@ -21,7 +23,7 @@
     display: grid;
     grid-template-columns: 93.9% 5.5%;
     margin-top: 20px;
-    width: 54%;
+    width:calc(54% - 100px);
     margin: 0 auto;
 }
 
@@ -29,8 +31,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 25px;
-    margin-top: 35px;
+    padding-top: 35px;
     padding-bottom: 30px;
+    width:calc(100% - 200px);
+    margin: 0 auto;
 }
 
 .div-categories, .div-sorting{
