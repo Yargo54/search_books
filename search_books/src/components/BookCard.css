@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+.book-card{
+    display: grid;
+    background-color: #DCDCDC;
+    text-align: start;
+    grid-row-gap: 10px;
+    grid-template-columns: 100%;
+    width: 90%;
+    align-items: center;
+}
+
+.img-book{
+    justify-self: center;
+    align-self: center;
+    width: 67%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.book-categorie, .description, .author{
+    justify-self: start;
+    padding-left: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.book-categorie{
+    text-decoration: underline;
+    color: #808080;
+}
+
+.description{
+    font-weight: 700;
+    width: 50%;
+    font-size: 20px;
+    margin: 0;
+}
+
+.div-author{
+    padding-left: 15px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+}
+
+.author{
+    padding: 0;
+    color: #808080;
+}
+
+@media screen and (max-width: 991px) {
+    .description{
+        font-weight: 700;
+        width: 50%;
+        font-size: 15px;
+        margin: 0;
+    }
+}

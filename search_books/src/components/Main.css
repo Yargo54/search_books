@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
+
+.main{
+    background-color: #FFFAFA;
+}
+
+.found-text{
+    font-family: 'Inconsolata', monospace;
+    font-size: 30px;
+    font-weight: 700;
+    padding-top: 15px;
+    text-align: center;
+    width:calc(100% - 200px);
+    margin: 0 auto;
+}
+
+.book-card-list{
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 24%);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-items: center;
+    margin: 0 auto;
+    padding-top: 30px;
+    width: 80%;
+}
+
+.div-load-more{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    margin-bottom: 20px;
+}
+
+.button-load-more{
+    width: 300px;
+    height: 50px;
+    margin: 0 auto;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background-color: #DCDCDC;
+    font-family: 'Inconsolata', monospace;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.undefined{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.fetching{
+    width: 200px;
+    height: 100px;
+    border-radius: 100%;
+    margin: 30vh auto;
+    border: 2px dashed red;
+    animation-name: search-fetching;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+@keyframes search-fetching {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+  
+    100% {
+      transform: rotate(360deg) scale(1.3);
+    }
+  }
