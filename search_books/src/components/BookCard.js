@@ -11,9 +11,9 @@ function BookCard({ book }) {
         <>
             <div className="book-card" id={book.id} onClick={() => dispatch(idBook(book.id))}>
                 <img src={
-                    book.volumeInfo.imageLinks.smallThumbnail 
+                    book?.volumeInfo?.imageLinks?.smallThumbnail 
                         ? 
-                            book.volumeInfo.imageLinks.smallThumbnail 
+                            book?.volumeInfo?.imageLinks?.smallThumbnail 
                         : 
                             "https://www.hot-motor.ru/body/clothes/images/no_icon.png"
                     } 
